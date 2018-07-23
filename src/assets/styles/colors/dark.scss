@@ -8,6 +8,7 @@ File: scss
 $dark-primary: mat-palette($mat-blue);
 $dark-accent:  mat-palette($mat-indigo, A200, A100, A400);
 $dark-warn: mat-palette($mat-pink);
+$dark-grey:  mat-palette($mat-blue-grey, 900, A100, A400);
 $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 
 $themecolor:#F44336;
