@@ -13,6 +13,13 @@ export const AppRoutes: Routes = [{
     path: 'cadastros',
     loadChildren: './cadastros/cadastros.module#CadastrosComponentsModule'
   }, {
+    path: 'material',
+    loadChildren: './material-component/material.module#MaterialComponentsModule'
+  }
+  , {
+    path: 'forms',
+    loadChildren: './forms/forms.module#FormModule'
+  }, {
     path: 'dashboard',
     loadChildren: './dashboard/dashboard.module#DashboardModule'
   }]
