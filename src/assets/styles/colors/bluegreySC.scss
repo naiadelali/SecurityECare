@@ -15,6 +15,9 @@ $themecolor:#64B5F6;
 $themecolor-alt: #64B5F6;
 $white:#fff;
 .bluegreysc{
+    .mat-raised-button.mat-accent{
+        color:$white!important;
+    }
     .mat-toolbar{
         color: $themecolor!important;
     }

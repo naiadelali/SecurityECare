@@ -7,7 +7,7 @@ File: scss
 
 @include mat-core();
 $bluegreysc-app-primary: mat-palette($mat-blue-grey, 900);
-$bluegreysc-app-accent: mat-palette($mat-light-blue, 600);
+$bluegreysc-app-accent: mat-palette($mat-blue, 300);
 $bluegreysc-app-warn: mat-palette($mat-red,600);
 // Create the theme object (a Sass map containing all of the palettes).
 $bluegreysc-app-theme: mat-light-theme($bluegreysc-app-primary, $bluegreysc-app-accent, $bluegreysc-app-warn);
@@ -15,6 +15,9 @@ $themecolor:#64B5F6;
 $themecolor-alt: #64B5F6;
 $white:#fff;
 .bluegreysc{
+    .mat-raised-button.mat-accent{
+        color:$white!important;
+    }
     .mat-toolbar{
         color: $themecolor!important;
     }
