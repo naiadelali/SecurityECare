@@ -1,0 +1,40 @@
+/*
+Template Name: Material Pro Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+
+@include mat-core();
+$bluegreysc-app-primary: mat-palette($mat-blue-grey, 900);
+$bluegreysc-app-accent: mat-palette($mat-light-blue, 600);
+$bluegreysc-app-warn: mat-palette($mat-red,600);
+// Create the theme object (a Sass map containing all of the palettes).
+$bluegreysc-app-theme: mat-light-theme($bluegreysc-app-primary, $bluegreysc-app-accent, $bluegreysc-app-warn);
+$themecolor:#64B5F6;
+$themecolor-alt: #64B5F6;
+$white:#fff;
+.bluegreysc{
+    .mat-toolbar{
+        color: $white!important;
+    }
+    .mat-primary{
+        color: $themecolor!important;
+    }
+    #snav {
+        
+        .mat-list-item { 
+            .mat-list-item-content {
+                &:hover {
+                    > a {
+                        color: $themecolor;
+                    }
+                }
+            }
+            &.selected > .mat-list-item-content > a {
+                background: $themecolor-alt;
+                color: $white;
+            }
+        }
+    }
+}
