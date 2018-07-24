@@ -21,6 +21,7 @@ export class FullComponent implements OnDestroy, AfterViewInit {
   dark: boolean;
   grey:boolean;
   bluesc:boolean;
+  bluegreysc:boolean;
   minisidebar: boolean;
   boxed: boolean;
   danger: boolean;
