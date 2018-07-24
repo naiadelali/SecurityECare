@@ -7,7 +7,7 @@ File: scss
 
 @include mat-core();
 $grey-app-primary: $dark-grey;
-$grey-app-accent: mat-palette($mat-red, A200, A100, A400);
+$grey-app-accent: mat-palette($mat-indigo, A200, A100, A400);
 $grey-app-warn: mat-palette($mat-amber);
 // Create the theme object (a Sass map containing all of the palettes).
 $grey-app-theme: mat-light-theme($grey-app-primary, $grey-app-accent, $grey-app-warn);

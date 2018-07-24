@@ -62,3 +62,9 @@ File: scss
 .grey {  
   @include angular-material-theme($grey-app-theme); 
 }
+
+// Blue SC Theme
+@import 'colors/bluesc';
+.bluesc {  
+  @include angular-material-theme($bluesc-app-theme); 
+}
