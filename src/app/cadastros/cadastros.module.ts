@@ -11,7 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { CadastrosRoutes } from './cadastros.routing';
-import { ButtonsComponent } from './buttons/buttons.component';
+import { ListaVidasComponent } from './vidas/lista-vidas/lista-vidas.component';
 
 
 @NgModule({
@@ -32,7 +32,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
     // DialogOverviewExampleDialogComponent
   ],
   declarations: [
-    ButtonsComponent
+    ListaVidasComponent
     
   ]
 })

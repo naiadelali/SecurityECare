@@ -33,14 +33,12 @@ const MENUITEMS = [
     }, 
     {
         state: 'cadastros',
-        name: 'Cadastros',
+        name: 'Cadastros Básicos',
         type: 'sub',
         icon: 'format_list_bulleted',
-        badge: [
-            {type: 'red', value: '1'}
-        ],
+       
         children: [
-            {state: 'button', name: 'Buttons' }
+            {state: 'button', name: 'Vidas' }
         ]
     } , {
       state: 'forms',

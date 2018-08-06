@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { ButtonsComponent } from './buttons/buttons.component';
+import { ListaVidasComponent } from './vidas/lista-vidas/lista-vidas.component';
 
 
 export const CadastrosRoutes: Routes = [
@@ -8,7 +8,7 @@ export const CadastrosRoutes: Routes = [
     path: '',
     children: [{
       path: 'button',
-      component: ButtonsComponent
+      component: ListaVidasComponent
     }]
   }
 ];
