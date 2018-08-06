@@ -15,11 +15,15 @@ $themecolor:#64B5F6;
 $themecolor-alt: #64B5F6;
 $white:#fff;
 .bluesc{
+    .mat-input-element{
+        color:$themecolor!important
+    }
     .mat-toolbar{
         color: $white!important;
     }
     .mat-primary{
         color: $white!important;
+       
     }
     #snav {
         
