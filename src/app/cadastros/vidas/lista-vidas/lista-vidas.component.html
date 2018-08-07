@@ -4,7 +4,14 @@
                 <mat-card-content>
                     <div fxLayout="row" fxLayoutAlign="space-between center">
                         <mat-card-title><b>Vidas</b> Cadastradas</mat-card-title>
-                        <div><button mat-raised-button color="primary">Primary</button></div>
+                        <div>
+                            <button mat-raised-button color="primary">
+                                <mat-icon>add_circle_outline </mat-icon> Cadastro de vidas</button>
+                            <button mat-raised-button color="warn" [disabled]="!selection.hasValue()">
+                                <mat-icon>remove_circle_outline </mat-icon> Apagar</button>
+                            <button mat-button>
+                                <mat-icon>attachment </mat-icon> Importar</button>
+                        </div>
                     </div>
                     <div class="bg-light p-10 p-r-20 p-l-20">
                         <mat-form-field>
@@ -13,6 +20,18 @@
                     </div>
                     <div class="table-rasponsive">
                         <mat-table [dataSource]="dataSource" matSort>
+    
+                            <!-- Checkbox Column -->
+                            <ng-container matColumnDef="select">
+                                <th mat-header-cell *matHeaderCellDef>
+                                    <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()">
+                                    </mat-checkbox>
+                                </th>
+                                <td mat-cell *matCellDef="let row">
+                                    <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)">
+                                    </mat-checkbox>
+                                </td>
+                            </ng-container>
     
                             <!-- ID Column -->
                             <ng-container matColumnDef="id">
