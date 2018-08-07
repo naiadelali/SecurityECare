@@ -6,7 +6,7 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
   styleUrls: ['./lista-vidas.component.scss']
 })
 export class ListaVidasComponent {
-   displayedColumns = ['id', 'nome', 'dt_nasc', 'dt_adm'];
+   displayedColumns = ['id', 'nome', 'dt_nasc', 'dt_adm', 'dt_dem', 'cpf', 'nitpis'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

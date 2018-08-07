@@ -38,7 +38,7 @@ const MENUITEMS = [
         icon: 'format_list_bulleted',
        
         children: [
-            {state: 'button', name: 'Vidas' }
+            {state: 'vidas', name: 'Vidas' }
         ]
     } , {
       state: 'forms',

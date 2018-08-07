@@ -7,7 +7,7 @@ export const CadastrosRoutes: Routes = [
   {
     path: '',
     children: [{
-      path: 'button',
+      path: 'vidas',
       component: ListaVidasComponent
     }]
   }

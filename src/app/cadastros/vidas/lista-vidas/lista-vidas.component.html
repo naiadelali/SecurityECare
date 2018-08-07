@@ -1,65 +1,68 @@
 <div fxLayout="row" fxLayoutWrap="wrap">
-    <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
-        <mat-card>
-            <mat-card-content> 
-                <mat-card-title><b>Vidas</b> Cadastradas</mat-card-title>
-                <div class="bg-light p-10 p-r-20 p-l-20">
-                    <mat-form-field>
-                        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar...">
-                    </mat-form-field>
-                </div>    
-                <div class="table-rasponsive">
-                    <mat-table [dataSource]="dataSource" matSort>
-
-                    <!-- ID Column -->
-                    <ng-container matColumnDef="id">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> Código </mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
-                    </ng-container>
-
-                    <!-- nome Column -->
-                    <ng-container matColumnDef="nome">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> Nome </mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.nome}} </mat-cell>
-                    </ng-container>
-
-                    <!-- dt_nasc Column -->
-                    <ng-container matColumnDef="dt_nasc">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> Data Nascimento </mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.dt_nasc}} </mat-cell>
-                    </ng-container>
-
-                    <!-- dt_adm Column -->
-                    <ng-container matColumnDef="dt_adm">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> Data Admissão </mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.dt_adm}} </mat-cell>
-                    </ng-container>
-                    
-                    <!-- dt_dem Column -->
-                    <ng-container matColumnDef="dt_dem">
-                       <mat-header-cell *matHeaderCellDef mat-sort-header> Data Demissão </mat-header-cell>
-                       <mat-cell *matCellDef="let row"> {{row.dt_dem}} </mat-cell>
-                    </ng-container>
-                    <!-- cpf Column -->
-                    <ng-container matColumnDef="cpf">
-                       <mat-header-cell *matHeaderCellDef mat-sort-header>CPF </mat-header-cell>
-                       <mat-cell *matCellDef="let row"> {{row.cpf}} </mat-cell>
-                    </ng-container>
-
-                    <!-- nitpis Column -->
-                    <ng-container matColumnDef="nitpis">
-                        <mat-header-cell *matHeaderCellDef mat-sort-header>NIT/PIS </mat-header-cell>
-                        <mat-cell *matCellDef="let row"> {{row.nitpis}} </mat-cell>
-                     </ng-container>
-
-                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-                    <mat-row *matRowDef="let row; columns: displayedColumns;">
-                    </mat-row>
-                  </mat-table>
-
-                  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" itemsPerPageLabel="zxc"></mat-paginator>
-                </div>    
-            </mat-card-content>
-        </mat-card>
+        <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+            <mat-card>
+                <mat-card-content>
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <mat-card-title><b>Vidas</b> Cadastradas</mat-card-title>
+                        <div><button mat-raised-button color="primary">Primary</button></div>
+                    </div>
+                    <div class="bg-light p-10 p-r-20 p-l-20">
+                        <mat-form-field>
+                            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar...">
+                        </mat-form-field>
+                    </div>
+                    <div class="table-rasponsive">
+                        <mat-table [dataSource]="dataSource" matSort>
+    
+                            <!-- ID Column -->
+                            <ng-container matColumnDef="id">
+                                <mat-header-cell *matHeaderCellDef mat-sort-header> Código </mat-header-cell>
+                                <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+                            </ng-container>
+    
+                            <!-- nome Column -->
+                            <ng-container matColumnDef="nome">
+                                <mat-header-cell *matHeaderCellDef mat-sort-header> Nome </mat-header-cell>
+                                <mat-cell *matCellDef="let row"> {{row.nome}} </mat-cell>
+                            </ng-container>
+    
+                            <!-- dt_nasc Column -->
+                            <ng-container matColumnDef="dt_nasc">
+                                <mat-header-cell *matHeaderCellDef mat-sort-header> Data Nascimento </mat-header-cell>
+                                <mat-cell *matCellDef="let row"> {{row.dt_nasc}} </mat-cell>
+                            </ng-container>
+    
+                            <!-- dt_adm Column -->
+                            <ng-container matColumnDef="dt_adm">
+                                <mat-header-cell *matHeaderCellDef mat-sort-header> Data Admissão </mat-header-cell>
+                                <mat-cell *matCellDef="let row"> {{row.dt_adm}} </mat-cell>
+                            </ng-container>
+    
+                            <!-- dt_dem Column -->
+                            <ng-container matColumnDef="dt_dem">
+                                <mat-header-cell *matHeaderCellDef mat-sort-header> Data Demissão </mat-header-cell>
+                                <mat-cell *matCellDef="let row"> {{row.dt_dem}} </mat-cell>
+                            </ng-container>
+                            <!-- cpf Column -->
+                            <ng-container matColumnDef="cpf">
+                                <mat-header-cell *matHeaderCellDef mat-sort-header>CPF </mat-header-cell>
+                                <mat-cell *matCellDef="let row"> {{row.cpf}} </mat-cell>
+                            </ng-container>
+    
+                            <!-- nitpis Column -->
+                            <ng-container matColumnDef="nitpis">
+                                <mat-header-cell *matHeaderCellDef mat-sort-header>NIT/PIS </mat-header-cell>
+                                <mat-cell *matCellDef="let row"> {{row.nitpis}} </mat-cell>
+                            </ng-container>
+    
+                            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                            <mat-row *matRowDef="let row; columns: displayedColumns;">
+                            </mat-row>
+                        </mat-table>
+    
+                        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" itemsPerPageLabel="zxc"></mat-paginator>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
     </div>
-</div>
