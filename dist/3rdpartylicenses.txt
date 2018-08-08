@@ -670,10 +670,10 @@ THE SOFTWARE.
 MIT
 MIT
 
-@angular/router@6.0.3
+@angular/forms@6.0.3
 MIT
 MIT
 
-@angular/forms@6.0.3
+@angular/router@6.0.3
 MIT
 MIT
